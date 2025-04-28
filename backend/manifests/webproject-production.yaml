@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/melisabunjaku/WebProject
     path: backend/manifests   
-    targetRevision: 'v*'  
+    targetRevision: 'main'  
   project: default
   syncPolicy:
     automated:
