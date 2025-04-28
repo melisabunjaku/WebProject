@@ -23,11 +23,3 @@ spec:
             secretKeyRef:
               name: slack-webhook
               key: url
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: slack-webhook
-type: Opaque
-stringData:
-  url: "https://hooks.slack.com/services/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"

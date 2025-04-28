@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
-  namespace: myweb
+  namespace: myweb-production
 spec:
   accessModes:
     - ReadWriteOnce

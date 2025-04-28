@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres-configmap
-  namespace: myweb
+  namespace: myweb-production
 data:
   DB_NAME: tododb
   DB_USER: todo_user
