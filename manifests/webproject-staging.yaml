@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webproject-staging
+  namespace: argocd
+spec:
+  destination:
+    namespace: myweb-staging
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/melisabunjaku/WebProject
+    path: manifests   
+    targetRevision: main   
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

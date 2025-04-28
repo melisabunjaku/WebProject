@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: promtail-config
+  namespace: myweb
+data:
+  promtail.yaml: |
+    server:
+      http_listen_port: 3101
+      grpc_listen_port: 9095
+    positions:
+      filename: /tmp/positions.yaml
+    clients:
+      - url: http://loki:3100/loki/api/v1/push
+    scrape_configs:
+      - job_name: kubernetes-pods
+        pipeline_stages:
+          - json:
+              expressions:
+                stream: stream
+        static_configs:
+          - targets:
+              - localhost
+            labels:
+              job: kubernetes-pods
+              __path__: /var/log/pods/*/*.log
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: promtail
+  namespace: myweb
+spec:
+  selector:
+    matchLabels:
+      app: promtail
+  template:
+    metadata:
+      labels:
+        app: promtail
+    spec:
+      containers:
+      - name: promtail
+        image: grafana/promtail:2.0.0
+        args:
+          - "-config.file=/etc/promtail/promtail.yaml"
+        volumeMounts:
+          - mountPath: /etc/promtail
+            name: config-volume
+          - mountPath: /var/log
+            name: var-log
+            readOnly: true
+      volumes:
+        - name: config-volume
+          configMap:
+            name: promtail-config
+        - name: var-log
+          hostPath:
+            path: /var/log
+            type: Directory

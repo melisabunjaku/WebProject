@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: myweb
+spec:
+  ports:
+    - port: 3001          # External port we will use for accessing Grafana
+      targetPort: 3000     # Internal port inside the container (Grafana listens on 3000)
+      protocol: TCP
+  selector:
+    app: grafana

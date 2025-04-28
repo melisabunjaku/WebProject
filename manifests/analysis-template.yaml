@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: high-cpu-check
+  namespace: myweb
+spec:
+  args:
+    - name: threshold
+      value: "0.5"  
+  metrics:
+    - name: namespace-cpu
+      interval: 1m
+      count: 10
+      successCondition: result <= threshold
+      failureCondition: result > threshold
+      provider:
+        prometheus:
+          address: http://prometheus-kube-prometheus-prometheus.monitoring.svc:9090
+          query: |
+            sum(rate(container_cpu_usage_seconds_total{namespace="myweb"}[10m]))

@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo-backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "nats": "^2.29.3",
+    "nats.ws": "^1.30.3",
+    "node-cron": "^3.0.3",
+    "pg": "^8.15.1",
+    "winston": "^3.17.0",
+    "winston-loki": "^6.1.3"
+  }
+}

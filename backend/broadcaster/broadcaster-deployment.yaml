@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broadcaster
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: broadcaster
+  template:
+    metadata:
+      labels:
+        app: broadcaster
+    spec:
+      containers:
+      - name: broadcaster
+        image: mb2821/broadcaster:latest
+        env:
+        - name: NATS_URL
+          value: "nats://nats:4222"
+        - name: SLACK_WEBHOOK_URL
+          valueFrom:
+            secretKeyRef:
+              name: slack-webhook
+              key: url
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: slack-webhook
+type: Opaque
+stringData:
+  url: "https://hooks.slack.com/services/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"

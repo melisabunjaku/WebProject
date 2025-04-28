@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webproject-production
+  namespace: argocd
+spec:
+  destination:
+    namespace: myweb-production
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/melisabunjaku/WebProject
+    path: backend/manifests   
+    targetRevision: 'v*'  
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

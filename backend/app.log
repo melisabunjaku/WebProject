@@ -1,0 +1,23 @@
+{"address":"::1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Error initializing DB: connect ECONNREFUSED ::1:5432","port":5432,"stack":"Error: connect ECONNREFUSED ::1:5432\n    at C:\\WebProject\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\WebProject\\backend\\todo-backend.js:38:5","syscall":"connect"}
+{"address":"::1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Error initializing DB: connect ECONNREFUSED ::1:5432","port":5432,"stack":"Error: connect ECONNREFUSED ::1:5432\n    at C:\\WebProject\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\WebProject\\backend\\todo-backend.js:45:5","syscall":"connect"}
+{"level":"info","message":"Todos table ensured"}
+{"level":"info","message":"Hourly CronJob started"}
+{"level":"info","message":"Todo backend running on port 5001"}
+{"level":"info","message":"[2025-04-19T12:33:31.757Z] GET /todos - Body: undefined"}
+{"level":"info","message":"[2025-04-19T12:33:31.760Z] GET /todos"}
+{"level":"info","message":"Fetched todos: buy groceries, hello todo, walk my dog, buy food, walk to mall, buy food, walk to the park, buy a computer, buy a drink, walk to mall, Read https://en.wikipedia.org/wiki/Adrian_Mazilu, Read https://en.wikipedia.org/wiki/Arthur_Lewis_Hall, Read https://en.wikipedia.org/wiki/Breakthrough_(The_Gaslamp_Killer_album), go to museum, go for a hike!, Read https://en.wikipedia.org/wiki/Dio_Wang, work on my code, go to dinner, Read https://en.wikipedia.org/wiki/Full-rigged_pinnace, buy food, Read https://en.wikipedia.org/wiki/Mike_De_Decker, buy groceries, Read https://en.wikipedia.org/wiki/Za%C4%9Fulba_Ba%C4%9Flar%C4%B1, get my tires checked, Read https://en.wikipedia.org/wiki/Big_Wild, helloooo, Read https://en.wikipedia.org/wiki/Wrekenton, todo list , Read https://en.wikipedia.org/wiki/Orphan%27s_Tragedy, nje todo, Learn Node.js and Express for backend development., Short and valid todo for testing., Read https://en.wikipedia.org/wiki/Frenaros_FC_2000, This is another intentionally too long todo for testing purposes. The text should exceed 140 characters, which is the maximum allowed for to, go to mall, Read https://en.wikipedia.org/wiki/Alan_Gough_(cricketer)"}
+{"level":"info","message":"[2025-04-19T12:33:31.931Z] GET /favicon.ico - Body: undefined"}
+{"level":"info","message":"[2025-04-19T12:33:37.375Z] GET /web - Body: undefined"}
+{"level":"info","message":"[2025-04-19T12:37:56.008Z] POST /todos - Body: undefined"}
+{"level":"info","message":"[2025-04-19T13:00:00.104Z] Cron job: Fetching a random Wikipedia article"}
+{"level":"info","message":"Cron job: New todo added: Read https://en.wikipedia.org/wiki/Hold_On_(Trapeze_album)"}
+{"level":"info","message":"[2025-04-19T15:00:00.987Z] Cron job: Fetching a random Wikipedia article"}
+{"level":"error","message":"Cron job error fetching Wikipedia article:"}
+{"level":"info","message":"[2025-04-19T16:00:00.055Z] Cron job: Fetching a random Wikipedia article"}
+{"level":"error","message":"Cron job error fetching Wikipedia article:"}
+{"level":"info","message":"[2025-04-19T17:00:00.527Z] Cron job: Fetching a random Wikipedia article"}
+{"level":"error","message":"Cron job error fetching Wikipedia article:"}
+{"level":"info","message":"[2025-04-19T17:30:55.135Z] GET /todos - Body: undefined"}
+{"level":"info","message":"[2025-04-19T17:30:55.139Z] GET /todos"}
+{"address":"::1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Error fetching todos: connect ECONNREFUSED ::1:5432","port":5432,"stack":"Error: connect ECONNREFUSED ::1:5432\n    at C:\\WebProject\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\WebProject\\backend\\todo-backend.js:73:20","syscall":"connect"}
+{"address":"::1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Error initializing DB: connect ECONNREFUSED ::1:5432","port":5432,"stack":"Error: connect ECONNREFUSED ::1:5432\n    at C:\\WebProject\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\WebProject\\backend\\todo-backend.js:46:5","syscall":"connect"}
